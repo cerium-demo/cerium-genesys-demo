@@ -1,6 +1,5 @@
 import Head from "next/head"
 import Image from "next/image"
-import { useEffect } from "react"
 import {
   Cpu,
   Globe,
@@ -10,7 +9,7 @@ import {
   Server,
   Wifi,
 } from "react-feather"
-import useChat from "../hooks/useChat"
+import useCerium from "../hooks/useCerium"
 import logo from "../public/cerium-logo.svg"
 import ellipsesIllustration from "../public/ellipses-illustration.svg"
 import partners from "../public/partners.svg"
@@ -20,7 +19,7 @@ import reviewThree from "../public/review-3.png"
 import reviewFour from "../public/review-4.png"
 
 export default function Home() {
-  const { openChat } = useChat()
+  const { openChat } = useCerium()
 
   return (
     <>

@@ -1,9 +1,7 @@
-import { useState, useEffect, useCallback, useMemo } from "react"
+import { useEffect, useCallback, useMemo } from "react"
 
-export default function useChat() {
-  const [plugin, setPlugin] = useState()
-
-  const advancedConfig = useMemo(
+export default function useCerium() {
+  const webchatConfig = useMemo(
     () => ({
       form: {
         autoSubmit: false,
@@ -50,10 +48,10 @@ export default function useChat() {
   )
 
   const openChat = useCallback(() => {
-    if (plugin) {
-      plugin.command("WebChat.open", advancedConfig)
+    if (window.CXBus) {
+      window.CXBus.command("WebChat.open", webchatConfig)
     }
-  }, [plugin, advancedConfig])
+  }, [webchatConfig])
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -69,6 +67,28 @@ export default function useChat() {
 
         window._genesys = {
           widgets: {
+            main: {
+              theme: "light",
+            },
+            sidebar: {
+              showOnStartup: true,
+              position: "left",
+              expandOnHover: true,
+              channels: [
+                {
+                  name: "ChannelSelector",
+                  clickCommand: "ChannelSelector.open",
+                  clickOptions: {},
+                  //use your own static string or i18n query string for the below two display properties
+                  displayName: "Live Assist",
+                  displayTitle: "Get live help",
+                  icon: "agent",
+                },
+                {
+                  name: "WebChat",
+                },
+              ],
+            },
             webchat: {
               transport: {
                 type: "purecloud-v2-sockets",
@@ -100,9 +120,7 @@ export default function useChat() {
           },
         }
 
-        const plugin = window.CXBus.registerPlugin("custom")
-
-        setPlugin(plugin)
+        window.CXBus.command("SideBar.open")
       })()
     }
   }, [])
