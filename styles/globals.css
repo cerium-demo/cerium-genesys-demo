@@ -17,3 +17,20 @@
 .btn-inverted {
   @apply bg-primary bg-opacity-10 text-primary hover:bg-opacity-20;
 }
+
+/* === Cerium Styles === */
+
+.cx-widget {
+  @apply overflow-hidden;
+}
+
+.cx-widget,
+.cx-btn,
+.cx-form-control {
+  @apply rounded-xl !important;
+}
+
+.cx-btn.cx-btn-primary {
+  background: unset !important;
+  @apply bg-primary !important;
+}
