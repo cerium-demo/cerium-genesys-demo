@@ -6,16 +6,30 @@
   @apply mx-auto max-w-5xl;
 }
 
-.btn {
-  @apply px-8 py-5 my-5 bg-primary text-white rounded-xl font-medium transition hover:bg-opacity-90;
+.btn,
+.form-control {
+  @apply px-5 py-3 rounded-xl transition;
 }
 
-.btn-sm {
-  @apply px-5 py-3;
+.btn {
+  @apply bg-primary text-white font-medium hover:bg-opacity-90;
+}
+
+.btn-lg,
+.form-control-lg {
+  @apply px-8 py-5;
 }
 
 .btn-inverted {
   @apply bg-primary bg-opacity-10 text-primary hover:bg-opacity-20;
+}
+
+.form-control {
+  @apply border;
+}
+
+.label {
+  @apply block text-sm font-semibold mb-2;
 }
 
 /* === Cerium Styles === */

@@ -35,11 +35,11 @@ export default function Home() {
       </Head>
 
       <button
-        className="btn btn-sm btn-inverted flex items-center gap-2 fixed bottom-10 right-10"
+        className="btn btn-inverted flex items-center gap-2 fixed bottom-10 right-10"
         onClick={() => openChat()}
       >
         <MessageCircle size={20} />
-        <div>Live chat</div>
+        <div>Chat</div>
       </button>
 
       <header>
@@ -69,7 +69,7 @@ export default function Home() {
               center, and security solutions.
             </h2>
             <div className="pt-5 pb-10">
-              <a href="" className="btn block text-lg">
+              <a href="" className="btn btn-lg block text-lg">
                 Contact us
               </a>
             </div>
@@ -215,7 +215,50 @@ export default function Home() {
           <div className="text-center flex flex-col items-center gap-5">
             <div className="text-3xl font-semibold">Contact us</div>
           </div>
-          <div className="mt-10"></div>
+          <div className="mt-10">
+            <form>
+              <div className="grid grid-cols-2 gap-x-12 gap-y-6">
+                <div>
+                  <label htmlFor="name" className="label">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="form-control w-full"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="label">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="form-control w-full"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div className="col-span-2">
+                  <label htmlFor="message" className="label">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    className="form-control w-full"
+                    rows={5}
+                    placeholder="Enter your message"
+                  />
+                </div>
+                <div>
+                  <button type="submit" className="btn">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </>
