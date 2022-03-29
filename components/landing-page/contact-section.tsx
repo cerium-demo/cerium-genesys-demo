@@ -17,7 +17,7 @@ export function ContactSection() {
 
         reset()
 
-        alert("Message sent!")
+        alert("Your message is sent! Thank you!")
       }),
     [handleSubmit, reset]
   )
