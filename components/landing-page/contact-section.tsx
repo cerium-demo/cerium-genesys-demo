@@ -23,7 +23,7 @@ export function ContactSection() {
   )
 
   return (
-    <section className="my-28">
+    <section className="my-28" id="contact-section">
       <div className="container">
         <div className="text-center flex flex-col items-center gap-5">
           <div className="text-3xl font-semibold">Contact us</div>

@@ -25,7 +25,11 @@
 }
 
 .form-control {
-  @apply border;
+  @apply border outline-primary;
+}
+
+.form-control:hover {
+  @apply border-primary;
 }
 
 .label {
@@ -34,17 +38,38 @@
 
 /* === Cerium Styles === */
 
+/* Set a default font */
 .cx-widget {
-  @apply overflow-hidden;
+  @apply overflow-hidden font-sans !important;
 }
 
+/* Rounded corners on windows and buttons */
 .cx-widget,
 .cx-btn,
 .cx-form-control {
   @apply rounded-xl !important;
 }
 
+/* Repaint buttons to primary color */
 .cx-btn.cx-btn-primary {
   background: unset !important;
   @apply bg-primary !important;
+}
+
+/* Repaint SVG icons to primary color */
+.cx-widget.cx-theme-light .cx-svg-icon-tone1 {
+  fill: #0076ff !important;
+}
+
+/* Make modals more visible */
+.ow-modal,
+.cx-common-container,
+.cx-drop-shadow,
+.cx-sidebar {
+  @apply shadow-lg border !important;
+}
+
+/* Make "Live Assistance" buttons line up perfectly */
+.cx-channels {
+  display: flex;
 }

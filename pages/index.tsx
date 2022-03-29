@@ -68,7 +68,7 @@ export default function Home() {
               center, and security solutions.
             </h2>
             <div className="pt-5 pb-10">
-              <a href="" className="btn btn-lg block text-lg">
+              <a href="#contact-section" className="btn btn-lg block text-lg">
                 Contact us
               </a>
             </div>

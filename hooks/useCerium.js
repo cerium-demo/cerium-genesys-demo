@@ -69,6 +69,7 @@ export default function useCerium() {
           widgets: {
             main: {
               theme: "light",
+              downloadGoogleFont: false,
             },
             sidebar: {
               showOnStartup: true,
@@ -86,6 +87,7 @@ export default function useCerium() {
                 },
                 {
                   name: "WebChat",
+                  displayName: "Chat",
                 },
               ],
             },
@@ -116,6 +118,30 @@ export default function useCerium() {
                 customField3Label: "",
                 customField3: "",
               },
+            },
+            channelselector: {
+              channels: [
+                {
+                  clickCommand: "CallUs.open",
+                  displayName: "Call Us",
+                  icon: "call-outgoing",
+                },
+                {
+                  clickCommand: "WebChat.open",
+                  displayName: "Chat",
+                  icon: "chat",
+                },
+                {
+                  clickCommand: "SendMessage.open",
+                  displayName: "Send Message",
+                  icon: "email",
+                },
+                {
+                  clickCommand: "Callback.open",
+                  displayName: "Receive a Call",
+                  icon: "call-incoming",
+                },
+              ],
             },
           },
         }
