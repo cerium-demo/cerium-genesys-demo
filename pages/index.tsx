@@ -17,6 +17,7 @@ import reviewOne from "../public/review-1.png"
 import reviewTwo from "../public/review-2.png"
 import reviewThree from "../public/review-3.png"
 import reviewFour from "../public/review-4.png"
+import { ContactSection } from "../components/landing-page/contact-section"
 
 export default function Home() {
   const { openChat } = useCerium()
@@ -33,7 +34,6 @@ export default function Home() {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <button
         className="btn btn-inverted flex items-center gap-2 fixed bottom-10 right-10"
         onClick={() => openChat()}
@@ -41,7 +41,6 @@ export default function Home() {
         <MessageCircle size={20} />
         <div>Chat</div>
       </button>
-
       <header>
         <div className="absolute w-full">
           <div className="flex items-end justify-between py-7 container">
@@ -210,57 +209,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="my-28">
-        <div className="container">
-          <div className="text-center flex flex-col items-center gap-5">
-            <div className="text-3xl font-semibold">Contact us</div>
-          </div>
-          <div className="mt-10">
-            <form>
-              <div className="grid grid-cols-2 gap-x-12 gap-y-6">
-                <div>
-                  <label htmlFor="name" className="label">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="form-control w-full"
-                    placeholder="Enter your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="label">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="form-control w-full"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div className="col-span-2">
-                  <label htmlFor="message" className="label">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    className="form-control w-full"
-                    rows={5}
-                    placeholder="Enter your message"
-                  />
-                </div>
-                <div>
-                  <button type="submit" className="btn">
-                    Send
-                  </button>
-                </div>
-              </div>
-            </form>
+
+      <ContactSection />
+
+      <footer>
+        <div className="bg-gray-100">
+          <div className="container text-sm text-gray-500 text-center p-5">
+            <p>Cerium Networks® © Copyright 2022. All Rights Reserved.</p>
           </div>
         </div>
-      </section>
+      </footer>
     </>
   )
 }

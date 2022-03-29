@@ -19,14 +19,34 @@ export default async function handler(
   }
 
   if (req.method === "POST") {
-    const { email, message } = req.body
+    const {
+      firstName,
+      lastName,
+      phone,
+      email,
+      company,
+      message,
+      communicationForm,
+      agreeToAdditionalContent,
+    } = req.body
 
     await transporter.sendMail(
       {
         from: email,
         to: "ramziddin.makhmudov@gmail.com",
         subject: `Cerium Networks Website: ${email}`,
-        text: message,
+        html: [
+          `<p>First Name: ${firstName}</p>`,
+          `<p>Last Name: ${lastName}</p>`,
+          `<p>Phone: ${phone}</p>`,
+          `<p>Email: ${email}</p>`,
+          `<p>Company: ${company}</p>`,
+          `<p>Preferred Communication Form: ${communicationForm}</p>`,
+          `<p>Agree To Additional Content: ${
+            agreeToAdditionalContent ? "Yes" : "No"
+          }</p>`,
+          `<p>Message: ${message}</p>`,
+        ].join("\n"),
       },
       () => {}
     )
