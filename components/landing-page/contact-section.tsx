@@ -119,8 +119,9 @@ export function ContactSection() {
                   className="form-control w-full"
                   {...register("communicationForm")}
                   required
+                  defaultValue=""
                 >
-                  <option value="" disabled hidden selected>
+                  <option value="" disabled hidden>
                     Select a preferred option
                   </option>
                   <option>Phone</option>

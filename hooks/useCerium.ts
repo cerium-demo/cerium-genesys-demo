@@ -1,5 +1,28 @@
 import { useEffect, useCallback, useMemo } from "react"
 
+declare global {
+  interface Window {
+    CXBus: any
+    _genesys: any
+    CHANNEL_SELECTOR_SUBSCRIBED: boolean
+    CHANNEL_SELECTOR_EVENTS_SET: boolean
+  }
+}
+
+async function loadScript(src) {
+  const script = document.createElement("script")
+
+  script.src = src
+  script.async = true
+  script.defer = true
+
+  document.body.appendChild(script)
+
+  await new Promise((resolve) => {
+    script.onload = resolve
+  })
+}
+
 export default function useCerium() {
   const webchatConfig = useMemo(
     () => ({
@@ -55,8 +78,10 @@ export default function useCerium() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      ;(async () => {
-        await import("../lib/genesys-web-chat-script")
+      ;(async function fn() {
+        await loadScript(
+          "https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js"
+        )
 
         window.CXBus.configure({
           debug: false,
@@ -70,6 +95,7 @@ export default function useCerium() {
             main: {
               theme: "light",
               downloadGoogleFont: false,
+              preload: ["sidebar"],
             },
             sidebar: {
               showOnStartup: true,
@@ -105,19 +131,6 @@ export default function useCerium() {
                   },
                 },
               },
-              userData: {
-                addressStreet: "962 Trail",
-                addressCity: "",
-                addressPostalCode: "",
-                addressState: "",
-                phoneNumber: "",
-                customField1Label: "",
-                customField1: "",
-                customField2Label: "",
-                customField2: "",
-                customField3Label: "",
-                customField3: "",
-              },
             },
             channelselector: {
               channels: [
@@ -141,12 +154,43 @@ export default function useCerium() {
                   displayName: "Receive a Call",
                   icon: "call-incoming",
                 },
+                {
+                  clickCommand: "",
+                  displayName: "Message on Facebook",
+                  html: `<img src="/facebook-assistance-icon.png" />`,
+                },
+                {
+                  clickCommand: "",
+                  displayName: "Send SMS text",
+                  icon: "email",
+                },
               ],
             },
           },
         }
 
-        window.CXBus.command("SideBar.open")
+        if (!window.CHANNEL_SELECTOR_SUBSCRIBED) {
+          window.CHANNEL_SELECTOR_SUBSCRIBED = true
+          window.CXBus.subscribe("ChannelSelector.opened", () => {
+            // Facebook button
+            if (!window.CHANNEL_SELECTOR_EVENTS_SET) {
+              document
+                .querySelector(".cx-channel.Channel04")
+                .addEventListener("click", () => {
+                  open("https://www.facebook.com/")
+                })
+
+              // SMS button
+              document
+                .querySelector(".cx-channel.Channel05")
+                .addEventListener("click", () => {
+                  open("tel:+1-541-754-3010", "_self")
+                })
+
+              window.CHANNEL_SELECTOR_EVENTS_SET = true
+            }
+          })
+        }
       })()
     }
   }, [])
