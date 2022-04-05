@@ -184,7 +184,7 @@ export default function useCerium() {
               document
                 .querySelector(".cx-channel.Channel05")
                 .addEventListener("click", () => {
-                  open("tel:+1-541-754-3010", "_self")
+                  open("sms:+1-541-754-3010", "_self")
                 })
 
               window.CHANNEL_SELECTOR_EVENTS_SET = true
