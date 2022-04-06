@@ -49,9 +49,9 @@ export default async function handler(
           `<p>Message: ${message}</p>`,
         ].join("\n"),
       },
-      () => {}
+      () => {
+        res.end()
+      }
     )
   }
-
-  res.end()
 }
