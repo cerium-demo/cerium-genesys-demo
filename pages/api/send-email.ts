@@ -49,6 +49,7 @@ export default async function handler(
         ].join("\n"),
       },
       () => {
+        console.log(process.env.NODEMAILER_RECEIVER)
         res.end()
       }
     )
