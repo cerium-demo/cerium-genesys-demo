@@ -160,9 +160,28 @@ export default function useCerium() {
                   html: `<img src="/facebook-assistance-icon.png" />`,
                 },
                 {
-                  clickCommand: "",
+                  clickCommand: "CallUs.open",
                   displayName: "Send SMS text",
                   icon: "email",
+                },
+              ],
+            },
+            callus: {
+              contacts: [
+                {
+                  displayName: "Payments",
+                  i18n: "Number001",
+                  number: "1 202 555 0162",
+                },
+                {
+                  displayName: "Local",
+                  i18n: "Number002",
+                  number: "202 555 0134",
+                },
+                {
+                  displayName: "International",
+                  i18n: "Number003",
+                  number: "0647 555 0131",
                 },
               ],
             },
@@ -181,11 +200,11 @@ export default function useCerium() {
                 })
 
               // SMS button
-              document
-                .querySelector(".cx-channel.Channel05")
-                .addEventListener("click", () => {
-                  open("sms:+18002170933", "_self")
-                })
+              // document
+              //   .querySelector(".cx-channel.Channel05")
+              //   .addEventListener("click", () => {
+              //     open("sms:+18002170933", "_self")
+              //   })
 
               window.CHANNEL_SELECTOR_EVENTS_SET = true
             }
