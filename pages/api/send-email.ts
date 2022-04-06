@@ -33,8 +33,7 @@ export default async function handler(
     await transporter.sendMail(
       {
         from: email,
-        // to: "ramziddin.makhmudov@gmail.com",
-        to: "webdemo@ceriumnetworks.pure.cloud",
+        to: process.env.NODEMAILER_RECEIVER || "ramziddin.makhmudov@gmail.com",
         subject: `Cerium Networks Website: ${email}`,
         html: [
           `<p>First Name: ${firstName}</p>`,
