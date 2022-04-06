@@ -177,14 +177,14 @@ export default function useCerium() {
               document
                 .querySelector(".cx-channel.Channel04")
                 .addEventListener("click", () => {
-                  open("https://www.facebook.com/")
+                  open("https://www.facebook.com/ceriumdemo")
                 })
 
               // SMS button
               document
                 .querySelector(".cx-channel.Channel05")
                 .addEventListener("click", () => {
-                  open("sms:+1-541-754-3010", "_self")
+                  open("sms:+18002170933", "_self")
                 })
 
               window.CHANNEL_SELECTOR_EVENTS_SET = true

@@ -9,10 +9,7 @@ const transporter = nodemailer.createTransport({
   },
 })
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.status(405).end()
     return
@@ -30,7 +27,7 @@ export default async function handler(
       agreeToAdditionalContent,
     } = req.body
 
-    await transporter.sendMail(
+    transporter.sendMail(
       {
         from: email,
         to: process.env.NODEMAILER_RECEIVER || "ramziddin.makhmudov@gmail.com",
@@ -49,7 +46,7 @@ export default async function handler(
         ].join("\n"),
       },
       () => {
-        console.log(process.env.NODEMAILER_RECEIVER)
+        // console.log(process.env.NODEMAILER_RECEIVER)
         res.end()
       }
     )
