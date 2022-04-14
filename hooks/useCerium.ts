@@ -23,7 +23,7 @@ async function loadScript(src) {
   })
 }
 
-export default function useCerium() {
+export default function useCerium({ openSmsModal = () => {} } = {}) {
   const webchatConfig = useMemo(
     () => ({
       form: {
@@ -160,7 +160,7 @@ export default function useCerium() {
                   html: `<img src="/facebook-assistance-icon.png" />`,
                 },
                 {
-                  clickCommand: "CallUs.open",
+                  // clickCommand: "CallUs.open",
                   displayName: "Send SMS text",
                   icon: "email",
                 },
@@ -200,11 +200,9 @@ export default function useCerium() {
                 })
 
               // SMS button
-              // document
-              //   .querySelector(".cx-channel.Channel05")
-              //   .addEventListener("click", () => {
-              //     open("sms:+18002170933", "_self")
-              //   })
+              document
+                .querySelector(".cx-channel.Channel05")
+                .addEventListener("click", openSmsModal)
 
               window.CHANNEL_SELECTOR_EVENTS_SET = true
             }

@@ -18,12 +18,30 @@ import reviewTwo from "../public/review-2.png"
 import reviewThree from "../public/review-3.png"
 import reviewFour from "../public/review-4.png"
 import { ContactSection } from "../components/landing-page/contact-section"
+import { useState } from "react"
+import Modal from "../components/modal"
 
 export default function Home() {
-  const { openChat } = useCerium()
+  const [isSmsModalOpen, setOpenSmsModal] = useState(false)
+  const { openChat } = useCerium({ openSmsModal: () => setOpenSmsModal(true) })
 
   return (
     <>
+      <Modal
+        title="Text Us"
+        show={isSmsModalOpen}
+        onClose={() => setOpenSmsModal(false)}
+      >
+        <p className="text-xl">Text us</p>
+        <p className="mb-3">
+          You can reach us at any of the following numbers...
+        </p>
+        <div className="flex flex-col">
+          <div>1 202 555 0162</div>
+          <div>202 555 0134</div>
+          <div>0647 555 0131</div>
+        </div>
+      </Modal>
       <Head>
         <title>Cerium Networks</title>
 
