@@ -191,26 +191,26 @@ export default function useCerium({ openSmsModal = () => {} } = {}) {
         if (!window.CHANNEL_SELECTOR_SUBSCRIBED) {
           window.CHANNEL_SELECTOR_SUBSCRIBED = true
           window.CXBus.subscribe("ChannelSelector.opened", () => {
-            // Facebook button
             if (!window.CHANNEL_SELECTOR_EVENTS_SET) {
-              document
-                .querySelector(".cx-channel.Channel04")
-                .addEventListener("click", () => {
-                  open("https://www.facebook.com/ceriumdemo")
-                })
-
-              // SMS button
-              document
-                .querySelector(".cx-channel.Channel05")
-                .addEventListener("click", openSmsModal)
-
               window.CHANNEL_SELECTOR_EVENTS_SET = true
             }
+
+            // Facebook button
+            document
+              .querySelector(".cx-channel.Channel04")
+              .addEventListener("click", () => {
+                open("https://www.facebook.com/ceriumdemo")
+              })
+
+            // SMS button
+            document
+              .querySelector(".cx-channel.Channel05")
+              .addEventListener("click", openSmsModal)
           })
         }
       })()
     }
-  }, [])
+  }, [openSmsModal])
 
   return { openChat }
 }

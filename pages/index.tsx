@@ -32,14 +32,9 @@ export default function Home() {
         show={isSmsModalOpen}
         onClose={() => setOpenSmsModal(false)}
       >
-        <p className="text-xl">Text us</p>
-        <p className="mb-3">
-          You can reach us at any of the following numbers...
-        </p>
+        <p className="mb-3">You can text us at the following number...</p>
         <div className="flex flex-col">
-          <div>1 202 555 0162</div>
-          <div>202 555 0134</div>
-          <div>0647 555 0131</div>
+          <div>+1 206 785 1665</div>
         </div>
       </Modal>
       <Head>
