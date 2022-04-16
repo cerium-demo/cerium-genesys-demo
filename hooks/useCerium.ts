@@ -169,7 +169,7 @@ export default function useCerium({ openSmsModal = () => {} } = {}) {
             callus: {
               contacts: [
                 {
-                  displayName: "Customer Service",
+                  displayName: "Customer Service Line",
                   i18n: "Number001",
                   number: "+1 208-471-4704",
                 },
