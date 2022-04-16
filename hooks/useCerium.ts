@@ -126,7 +126,7 @@ export default function useCerium({ openSmsModal = () => {} } = {}) {
                 interactionData: {
                   routing: {
                     targetType: "QUEUE",
-                    targetAddress: "Seattle CSQ",
+                    targetAddress: "Demo Chat",
                     priority: 2,
                   },
                 },
