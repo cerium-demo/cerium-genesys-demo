@@ -30,7 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     transporter.sendMail(
       {
         from: email,
-        to: process.env.NODEMAILER_RECEIVER || "ramziddin.makhmudov@gmail.com",
+        to: process.env.NODEMAILER_RECEIVER,
         subject: `Cerium Networks Website: ${email}`,
         html: [
           `<p>First Name: ${firstName}</p>`,
@@ -45,8 +45,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           `<p>Message: ${message}</p>`,
         ].join("\n"),
       },
-      () => {
-        // console.log(process.env.NODEMAILER_RECEIVER)
+      (err) => {
+        if (err) console.error(err)
+
         res.end()
       }
     )
