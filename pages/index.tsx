@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </Modal>
       <Head>
-        <script type="text/javascript" charset="utf-8">
+        <script type="text/javascript" charSet="utf-8">
   (function (g, e, n, es, ys) {
     g['_genesysJs'] = e;
     g[e] = g[e] || function () {
