@@ -63,8 +63,8 @@ export default function Home() {
               <a href="#">Contacts</a>
             </nav>
           </div>
+          <div id="genesys-support-center"></div>
         </div>
-         <div id="genesys-support-center"></div>
         <div className="container pt-28 h-[700px] flex items-center justify-center">
           <div className="flex flex-col items-center text-center gap-5">
            <Image src={partners} alt="Partners" />
