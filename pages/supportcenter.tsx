@@ -84,13 +84,14 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <section className="my-28">
+	<div id="genesys-support-center"></div>
+	<section className="my-28">
         <div className="container">
           <div className="text-center flex flex-col items-center gap-5">
             <div className="text-3xl font-semibold">
               We focus on your success
             </div>
-	<div id="genesys-support-center"></div>	  
+	 
             <p className="text-gray-500 max-w-xl leading-loose">
               Our consultative approach, deep technical expertise, local
               resources, and extensive strategic partnerships enables us to
