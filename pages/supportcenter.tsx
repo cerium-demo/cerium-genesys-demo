@@ -71,20 +71,7 @@ export default function Home() {
             </nav>
           </div>
         </div>
-        <div className="container pt-28 h-[700px] flex items-center justify-center">
-          <div className="flex flex-col items-center text-center gap-5"> 
-		  <div className="pt-5 pb-10">
-              <a href="#contact-section" className="btn btn-lg block text-lg">
-                Contact us
-              </a>
-            </div>
-            <Image src={partners} alt="Partners" />
-          </div>
-          <div className="absolute -z-10">
-            <Image src={ellipsesIllustration} alt="Illustration" />
-          </div>
-        </div>
-      </header>
+        </header>
 	<section className="my-28">
         <div className="container">
           <div className="text-center flex flex-col items-center gap-5">
