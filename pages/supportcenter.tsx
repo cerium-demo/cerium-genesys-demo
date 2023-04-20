@@ -136,71 +136,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="my-28">
-        <div className="container">
-          <div className="text-center flex flex-col items-center gap-5">
-            <div className="text-3xl font-semibold">
-              What our clients say about us
-            </div>
-          </div>
- 
-          <div className="mt-10 grid grid-cols-2 gap-12">
-            {[
-              {
-                pictureSrc: reviewOne,
-                title: "Brad",
-                subtitle: "Douglas County WA",
-                description:
-                  "I had the pleasure of working with Andrew for most of the weekend. We had an email server that was in need of updates. With Andrew’s assistance we worked late into the evening Friday, Saturday and half of Sunday to get the issues resolved. Without his dedicated assistance we would still be offline today.",
-              },
-              {
-                pictureSrc: reviewTwo,
-                title: "Michelle",
-                subtitle: "First Interstate Bank",
-                description:
-                  "In a world where you have to wait for responses and get bounced around from person to person, Marco was a breath of fresh air. Marco responded to my problem very quickly and was amazing how he did the troubleshooting and resolved my issue.",
-              },
-              {
-                pictureSrc: reviewThree,
-                title: "David",
-                subtitle: "Bethel School District",
-                description:
-                  "Zach was phenomenal to work with. He communicated well throughout the entire project and when it came time for knowledge dump, we spent half the time because so much of the information was already assimilated. Cerium has a real gem with Zach and this project went much more smoothly from start to finish than other projects I've done in the past with others.",
-              },
-              {
-                pictureSrc: reviewFour,
-                title: "Chase",
-                subtitle: "Adaptive Biotech",
-                description:
-                  "Daniel has gone above and beyond to make sure we are set up for best practices and explained pitfalls as well. He deserves a raise, or at least a 6 pack of beer for his efforts running down some misleadingly named routes/table names we have. Thank you for your outstanding efforts Daniel!",
-              },
-            ].map(({ pictureSrc, title, subtitle, description }) => (
-              <div
-                key={title}
-                className="border border-gray-100 rounded-xl p-6"
-              >
-                <div className="flex mb-4 items-center gap-4">
-                  <div className="w-14 h-w-14">
-                    <Image
-                      src={pictureSrc}
-                      alt={title}
-                      className="rounded-xl"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">{title}</h3>
-                    <p className="text-xs">{subtitle}</p>
-                  </div>
-                </div>
- 
-                <p className="text-sm text-gray-500 leading-loose">
-                  {description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  
  
       <ContactSection />
  
