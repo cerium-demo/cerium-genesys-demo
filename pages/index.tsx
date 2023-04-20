@@ -66,7 +66,7 @@ export default function Home() {
               <a href="#">Industries</a>
               <a href="#">About us</a>
               <a href="#">Contacts</a>
-              <a href="https://cerium-genesys-demo.vercel.app/supportcenter.tsx">Support Center</a>
+              <a href="https://cerium-genesys-demo.vercel.app/supportcenter">Support Center</a>
             </nav>
           </div>
         </div>
