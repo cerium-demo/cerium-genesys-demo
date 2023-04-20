@@ -73,7 +73,6 @@ export default function Home() {
         <div className="container pt-28 h-[700px] flex items-center justify-center">
           <div className="flex flex-col items-center text-center gap-5">
             <h1 className="text-6xl font-semibold leading-tight max-w-3xl relative">
-              <div id="genesys-support-center"></div>
 			  <div className="z-10 relative">
                 We connect your business to its potential
               </div>
@@ -83,7 +82,8 @@ export default function Home() {
               Cerium provides a full suite of collaboration, networking, data
               center, and security solutions.
             </h2>
-            <div className="pt-5 pb-10">
+            <div id="genesys-support-center"></div>
+		  <div className="pt-5 pb-10">
               <a href="#contact-section" className="btn btn-lg block text-lg">
                 Contact us
               </a>
