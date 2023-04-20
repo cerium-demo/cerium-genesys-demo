@@ -95,70 +95,7 @@ export default function Home() {
         </div>
       </header>
       <section className="my-28">
-        <div className="container">
-          <div className="text-center flex flex-col items-center gap-5">
-            <div className="text-3xl font-semibold">
-              We focus on your success
-            </div>
-            <p className="text-gray-500 max-w-xl leading-loose">
-              Our consultative approach, deep technical expertise, local
-              resources, and extensive strategic partnerships enables us to
-              design, deliver and support the advanced technology solutions that
-              are the foundation of your business.
-            </p>
-          </div>
- 
-          <div className="mt-10 grid grid-cols-3 gap-12">
-            {[
-              {
-                icon: Wifi,
-                title: "Unified Communications",
-                description:
-                  "We provide a unified communications platform that is easy to use, secure, and reliable.",
-              },
-              {
-                icon: Server,
-                title: "Data Center",
-                description: "Operation simplicity and business agility.",
-              },
-              {
-                icon: Globe,
-                title: "Networking",
-                description: "Secure, resilient network solutions.",
-              },
-              {
-                icon: Lock,
-                title: "Cybersecurity",
-                description:
-                  "A simplified approach to managing cyber threats & vulnerabilities.",
-              },
-              {
-                icon: Phone,
-                title: "Contact Center",
-                description:
-                  "Communication solutions that strengthen customer engagement.",
-              },
-              {
-                icon: Cpu,
-                title: "CIO Lifecycle Services",
-                description:
-                  "Unleash your technology’s full potential with comprehensive end to end lifecycle services",
-              },
-            ].map(({ icon: Icon, title, description }) => (
-              <div
-                key={title}
-                className="border border-gray-100 rounded-xl p-6"
-              >
-                <div className="bg-gray-50 inline-block rounded-xl p-4 -mt-16">
-                  <Icon className="text-primary" />
-                </div>
-                <h3 className="font-semibold mt-4 mb-2">{title}</h3>
-                <p className="text-sm text-gray-500">{description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
- 
+        
  
       <ContactSection />
  
