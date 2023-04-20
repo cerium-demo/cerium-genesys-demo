@@ -74,7 +74,7 @@ export default function Home() {
     
   
  
-      <ContactSection />
+      
  
       <footer>
         <div className="bg-gray-100">
