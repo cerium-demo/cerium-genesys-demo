@@ -66,6 +66,7 @@ export default function Home() {
               <a href="#">Industries</a>
               <a href="#">About us</a>
               <a href="#">Contacts</a>
+              <a href="#">Support Center</a>
             </nav>
           </div>
         </div>
