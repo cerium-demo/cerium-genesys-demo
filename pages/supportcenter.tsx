@@ -62,6 +62,7 @@ export default function Home() {
               <Image src={logo} alt="Cerium Networks" />
             </div>
             <nav className="flex items-center gap-8">
+              <a href="https://cerium-genesys-demo.vercel.app/index">Home</a>
               <a href="#">Services</a>
               <a href="#">Industries</a>
               <a href="#">About us</a>
