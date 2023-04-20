@@ -40,13 +40,7 @@ export default function Home() {
       </Modal>
       <Head>
         <title>Cerium Networks</title>
- 
-        <meta
-          name="description"
-          content="Cerium provides a full suite of collaboration, networking, data center, and security solutions."
-        />
- 
-        <link rel="icon" href="/favicon.ico" />
+ 	<link rel="icon" href="/favicon.ico" />
       </Head>
       <button
         className="btn btn-inverted flex items-center gap-2 fixed bottom-10 right-10"
@@ -73,8 +67,7 @@ export default function Home() {
         <div className="container pt-28 h-[700px] flex items-center justify-center">
           <div className="flex flex-col items-center text-center gap-5">
             <h1 className="text-6xl font-semibold leading-tight max-w-3xl relative">
-              <div id="genesys-support-center"></div>
-			  <div className="z-10 relative">
+             <div className="z-10 relative">
                 We connect your business to its potential
               </div>
               <div className="h-2 w-[280px] bg-primary-light transform -translate-x-4 -translate-y-5 z-0 right-0 absolute" />
