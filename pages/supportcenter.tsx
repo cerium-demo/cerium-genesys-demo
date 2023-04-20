@@ -71,8 +71,9 @@ export default function Home() {
             </nav>
           </div>
         </div>
-	<div id="genesys-support-center"></div>		  
+		  
         </header>
+	<div id="genesys-support-center"></div>		  
 	<section className="my-28">
         <div className="container">
           <div className="text-center flex flex-col items-center gap-5">
