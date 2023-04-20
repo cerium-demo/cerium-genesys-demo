@@ -55,7 +55,8 @@ export default function Home() {
         <MessageCircle size={20} />
         <div>Chat</div>
       </button>
-      <header>
+      <div id="genesys-support-center"></div>
+		  <header>
         <div className="absolute w-full">
           <div className="flex items-end justify-between py-7 container">
             <div className="h-12">
@@ -84,7 +85,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-	<div id="genesys-support-center"></div>
 	<section className="my-28">
         <div className="container">
           <div className="text-center flex flex-col items-center gap-5">
