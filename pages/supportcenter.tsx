@@ -38,10 +38,13 @@ export default function Home() {
           <div>+1 206 785 1665</div>
         </div>
       </Modal>
-      <Head>
+         <Head>
         <title>Cerium Networks</title>
  
-        
+        <meta
+          name="description"
+          content="Cerium provides a full suite of collaboration, networking, data center, and security solutions."
+        />
  
         <link rel="icon" href="/favicon.ico" />
       </Head>
