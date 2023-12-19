@@ -35,7 +35,7 @@ export default function Home() {
       >
         <p className="mb-3">You can text us at the following number...</p>
         <div className="flex flex-col">
-          <div>+1 888 492 4916 or +1 206 785 1665</div>
+          <div>+1 888 492 4916</div>
         </div>
       </Modal>
       <Head>
